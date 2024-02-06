@@ -19,6 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('products', ProductController::class);
+// Route::controller(ProductController::class)->group(function() {
+//     Route::get('/products/all', 'index')->name('products');
+// });
 
 Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/register', 'register')->name('register');
